@@ -4,18 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "mist",
-    "build": "vue-tsc && mist build",
+    "dev1": "mist",
+    "build": "mist build nitro",
+    "cp": "mkdir .vercel/output && mv servers/.output/* .vercel/output",
+    "buil": "vue-tsc && mist build",
     "preview": "mist preview"
   },
   "dependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@mistjs/cli": "0.0.1-beta.3",
+    "@mistjs/cli": "0.0.1-beta.4",
     "@vitejs/plugin-vue": "^4.2.3",
+    "cpx": "^1.5.0",
+    "npm-run-all": "^4.1.5",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
     "vue-tsc": "^1.8.5"
   }
 }
